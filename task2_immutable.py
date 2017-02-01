@@ -1,4 +1,4 @@
-def my_code(data, index, reached=None):
+def my_real_code(data, index, reached=None):
     if reached:
         if index in reached:
             return reached
@@ -9,9 +9,16 @@ def my_code(data, index, reached=None):
     print(index)
 
     for i in data.get(index, []):
-        reached = my_code(data, i, reached)
+        reached = my_real_code(data, i, reached)
 
     return reached
+
+
+def my_code(data, index):
+    """
+    Wrapper to not return any value
+    """
+    my_real_code(data, index)
 
 
 if __name__ == '__main__':
