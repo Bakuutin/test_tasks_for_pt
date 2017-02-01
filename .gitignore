@@ -1,0 +1,4 @@
+*.*
+# let it be whitelist
+!*.py
+!.gitignore

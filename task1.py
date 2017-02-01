@@ -1,5 +1,5 @@
 def my_code(data, offset=0, offset_string='  '):
-    for key, value in data.items():
+    for key, value in sorted(data.items()):
         print(offset_string * offset, key, ':', sep='')
 
         if isinstance(value, dict):
